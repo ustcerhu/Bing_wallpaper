@@ -51,7 +51,7 @@ def Get_Page_Pic(url_list):
 Get_Page_Pic(url_list)#获取首页的图片
 
 #接下来，点击‘下一页’，根据需要的页数进行设置总共的需要爬取的页数
-for i in range(123):
+for i in range(2):
      try:
          new=browser.find_element_by_link_text('下一页')
          new.click()
