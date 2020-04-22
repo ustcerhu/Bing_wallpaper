@@ -87,5 +87,10 @@ imputer.fit(housing_num)  #使用fit方法将imputer实例适配到训练集
 #我们无法确认系统启动之后新数据中是否一定不存在缺失值，因此稳妥起见，我们将imputer方法应用于所有的数值属性
 #imputer将所有属性计算得到的中位数放在imputer.statistics_属性中
 
-
+#文本标签转化成数字便于计算
+from sklearn.preprocessing import LabelEncoder
+encoder=LabelEncoder()
+housing_cat=housing1['ocean_proximity']
+housing_cat_encoded=encoder.fit_transform(housing_cat)
+housing_cat_encoded
 
